@@ -5,7 +5,7 @@ import { getProducts } from '../services/api';
 
 export const ProductContext = createContext();
 
-const ProductContextProvider = ({childern}) => {
+const ProductContextProvider = ({children}) => {
 
     const [products, setProducts] = useState([]);
 
@@ -15,11 +15,11 @@ const ProductContextProvider = ({childern}) => {
         }
 
         fetchProducts();
-    }, []);
+    },[]);
 
     return (
         <ProductContext.Provider value={products}>
-            {childern}
+            {children}
         </ProductContext.Provider>
     )
 };
