@@ -25,7 +25,7 @@ const ShopCart = () => {
                 state.itemsCounter > 0 && 
                 <div className={style.payments}>
                     <p><span>Total Items:</span> {state.itemsCounter}</p>
-                    <p><span>Total Payments:</span> {state.total}</p>
+                    <p><span>Total Payments:</span> ${state.total}</p>
                     <div className={style.buttonContainer}>
                         <button className={style.checkout} onClick={() => dispatch({type:"CHECKOUT"})}>Checkout</button>
                         <button className={style.clear} onClick={() => dispatch({type:"CLEAR"})}>Clear</button>

@@ -8,7 +8,7 @@ const Div = styled.div `
     width: 2rem;
     height: 2rem;
     position: fixed;
-    top 30px;
+    top 16px;
     left:30px;
     z-index: 10;
     display: none;
