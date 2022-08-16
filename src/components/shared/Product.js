@@ -1,12 +1,17 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { Link } from "react-router-dom";
 
 //Functions
 import { shorter } from '../../helpers/functions';
 
+//Context
+import { CartContext } from '../../contexts/CartContextProvider';
+
 const Product = ({data}) => {
 
     const {image, title, price, id } = data;
+
+    const {state, dispatch} = useContext(CartContext);
 
     return (
         <div>

@@ -3,3 +3,8 @@ export const shorter = str => {
     const newStr = `${strArr[0]} ${strArr[1]}`;
     return newStr;
 }
+
+export const isInCart = (state, id) => {
+    const result = !!state.selectedItems.find(item => item.id === id);
+    return result;
+}
