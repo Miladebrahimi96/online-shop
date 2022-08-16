@@ -7,6 +7,9 @@ import ProductDetails from './components/ProductDetails';
 import CartContextProvider from './contexts/CartContextProvider';
 import Navbar from './components/Navbar';
 import ShopCart from './components/ShopCart';
+import MensClothing from './components/Clothing';
+import Jewelery from './components/Jewelery';
+import Electronics from './components/Electronics';
 
 //Contexts
 import ProductContextProvider from './contexts/ProductContextProvider';
@@ -18,6 +21,9 @@ const App = () => {
         <Navbar/>
         <Routes>
           <Route path='/products' element={<MainStore/>}/>
+          <Route path='/clothing' element={<MensClothing/>}/>
+          <Route path='/jewelery' element={<Jewelery/>}/>
+          <Route path='/electronics' element={<Electronics/>}/>
           <Route path='/products/:id' element={<ProductDetails/>}/>
           <Route path='/cart' element={<ShopCart/>}/>
           <Route path='/*' element={<Navigate to="/products" />}/>
