@@ -5,11 +5,11 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import MainStore from './components/MainStore';
 import ProductDetails from './components/ProductDetails';
 import CartContextProvider from './contexts/CartContextProvider';
-import Navbar from './components/Navbar';
 import ShopCart from './components/ShopCart';
 import MensClothing from './components/Clothing';
 import Jewelery from './components/Jewelery';
 import Electronics from './components/Electronics';
+import Burger from './components/shared/Burger';
 
 //Contexts
 import ProductContextProvider from './contexts/ProductContextProvider';
@@ -18,7 +18,7 @@ const App = () => {
   return (
     <ProductContextProvider>
       <CartContextProvider>
-        <Navbar/>
+        <Burger/>
         <Routes>
           <Route path='/products' element={<MainStore/>}/>
           <Route path='/clothing' element={<MensClothing/>}/>

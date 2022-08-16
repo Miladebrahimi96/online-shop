@@ -1,28 +1,39 @@
 import React, { useContext } from 'react';
 import { Link } from "react-router-dom";
 
-//styles
-import style from "./Navbar.module.css";
-
 //contexts
 import { CartContext } from '../contexts/CartContextProvider';
 
 //icons
 import { FiShoppingCart } from "react-icons/fi";
 
-const Navbar = () => {
+
+
+//styles
+import style from "./Navbar.module.css";
+import styled from 'styled-components';
+
+const Div = styled.div `
+    @media (max-width: 768px) {
+        transition: all .3s linear;
+        transform: ${props => props.menu ? "translateX(0)" : "translateX(-250px)"};
+    }
+`
+
+
+const Navbar = ({menu}) => {
 
     const {state} = useContext(CartContext);
 
     return (
         <div className={style.mainContainer}>
             <div className={style.container}>
-                <div className={style.linkContainer}>
+                <Div menu={menu} className={style.linkContainer}>
                     <Link to="/products">Poducts</Link>
                     <Link to="/clothing">Clothing</Link>
                     <Link to="/jewelery">Jewelery</Link>
                     <Link to="/electronics">Electronics</Link>
-                </div>
+                </Div>
                 <div className={style.iconContainer}>
                     <Link to="/Cart"><FiShoppingCart/></Link>
                     <span>{state.itemsCounter}</span>
