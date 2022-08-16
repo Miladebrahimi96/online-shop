@@ -12,4 +12,4 @@ const getProduct = async (id) => {
     return response.data;
 }
 
-export { getProducts };
+export { getProducts, getProduct };
