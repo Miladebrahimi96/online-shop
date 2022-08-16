@@ -12,7 +12,7 @@ const ProductDetails = () => {
     const params = useParams();
     const id = params.id;
 
-    const [product, setProduct] = useState([]);
+    const [product, setProduct] = useState({});
 
     useEffect(() => {
         const fetchProduct = async () => {

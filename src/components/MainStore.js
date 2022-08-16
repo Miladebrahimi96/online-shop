@@ -1,5 +1,8 @@
 import React, { useContext } from 'react';
 
+//components
+import Loading from "./shared/Loading";
+
 //Styles
 import style from "./MainStore.module.css";
 
@@ -13,11 +16,17 @@ const MainStore = () => {
     console.log(products);
 
     return (
-        <div className={style.container}>
+        <>
             {
-                products.map(product => <Product key={product.id} data={product}/>)
+                products.length ?
+                <div className={style.container}>
+                    {
+                        products.map(product => <Product key={product.id} data={product}/>)
+                    }
+                </div>:
+                <Loading />
             }
-        </div>
+        </>
     );
 };
 
