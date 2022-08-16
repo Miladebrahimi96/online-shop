@@ -16,7 +16,7 @@ const ProductDetails = () => {
             setProduct(await getProduct(id));
         }
         fetchProduct();
-    },[])
+    },[id])
 
     const {image, title, price, category, description} = product;
 
