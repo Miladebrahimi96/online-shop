@@ -3,8 +3,26 @@
     flex-wrap: wrap;
     justify-content:space-around;
     align-items: center;
-    margin-top: 150px;
+    margin-top: 50px;
     padding: 0 120px;
+}
+
+.inputContainer {
+    margin-top: 120px;
+    text-align: center;
+}   
+.inputContainer input {
+    text-align: center;
+    border: 1px solid silver;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 4px 5px;
+    width: 120px;
+    transition: all .2s ease;
+}
+.inputContainer input:focus {
+    outline: none;
+    width: 250px;
 }
 
 @media (max-width: 1200px) {

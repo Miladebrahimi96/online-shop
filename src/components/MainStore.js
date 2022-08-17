@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 
 //components
 import Loading from "./shared/Loading";
@@ -13,17 +13,27 @@ import Product from './shared/Product';
 const MainStore = () => {
 
     const products = useContext(ProductContext);
-    console.log(products);
+
+    const [search, setSearch] = useState("");
+
+    //Serach input
+    const searchHandler = e => setSearch(e.target.value);
+    const searchProducts = products.filter(product => product.title.toLowerCase().includes(search.toLowerCase()));
 
     return (
         <>
             {
                 products.length ?
-                <div className={style.container}>
-                    {
-                        products.map(product => <Product key={product.id} data={product}/>)
-                    }
-                </div>:
+                <>
+                    <div className={style.inputContainer}>
+                        <input type="text" value={search} onChange={searchHandler} placeholder="Search Products"/>
+                    </div>
+                    <div className={style.container}>
+                        {
+                            searchProducts.map(product => <Product key={product.id} data={product}/>)
+                        }
+                    </div>
+                </>:
                 <Loading />
             }
         </>

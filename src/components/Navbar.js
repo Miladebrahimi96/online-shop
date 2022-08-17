@@ -29,7 +29,7 @@ const Navbar = ({menu}) => {
         <div className={style.mainContainer}>
             <div className={style.container}>
                 <Div menu={menu} className={style.linkContainer}>
-                    <Link to="/products">Poducts</Link>
+                    <Link to="/products">Products</Link>
                     <Link to="/clothing">Clothing</Link>
                     <Link to="/jewelery">Jewelery</Link>
                     <Link to="/electronics">Electronics</Link>
