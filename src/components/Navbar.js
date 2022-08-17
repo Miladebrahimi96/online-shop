@@ -30,9 +30,9 @@ const Navbar = ({menu}) => {
             <div className={style.container}>
                 <Div menu={menu} className={style.linkContainer}>
                     <Link to="/products">Products</Link>
-                    <Link to="/clothing">Clothing</Link>
-                    <Link to="/jewelery">Jewelery</Link>
-                    <Link to="/electronics">Electronics</Link>
+                    <Link to="/products/clothing">Clothing</Link>
+                    <Link to="/products/jewelery">Jewelery</Link>
+                    <Link to="/products/electronics">Electronics</Link>
                 </Div>
                 <div className={style.iconContainer}>
                     <Link to="/Cart"><FiShoppingCart/></Link>

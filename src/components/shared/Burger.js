@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,createContext } from 'react';
 import OutsideClickHandler from 'react-outside-click-handler';
 import Navbar from '../Navbar';
 
@@ -8,7 +8,7 @@ const Div = styled.div `
     width: 2rem;
     height: 2rem;
     position: fixed;
-    top 30px;
+    top 20px;
     left:30px;
     z-index: 10;
     display: none;
@@ -37,6 +37,7 @@ const Div = styled.div `
         }
     }
 `
+
 
 
 const Burger = () => {

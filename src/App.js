@@ -21,9 +21,9 @@ const App = () => {
         <Burger/>
         <Routes>
           <Route path='/products' element={<MainStore/>}/>
-          <Route path='/clothing' element={<MensClothing/>}/>
-          <Route path='/jewelery' element={<Jewelery/>}/>
-          <Route path='/electronics' element={<Electronics/>}/>
+          <Route path='/products/clothing' element={<MensClothing/>}/>
+          <Route path='/products/jewelery' element={<Jewelery/>}/>
+          <Route path='/products/electronics' element={<Electronics/>}/>
           <Route path='/products/:id' element={<ProductDetails/>}/>
           <Route path='/cart' element={<ShopCart/>}/>
           <Route path='/*' element={<Navigate to="/products" />}/>
