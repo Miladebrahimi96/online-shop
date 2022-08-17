@@ -28,7 +28,7 @@ const Navbar = ({menu}) => {
         <div className={style.mainContainer}>
             <div className={style.container}>
                 <Div menu={menu} className={style.linkContainer}>
-                    <Link to="">Login</Link>
+                    <Link to="/login">Login</Link>
                     <Link to="/products">Products</Link>
                     <Link to="/products/clothing">Clothing</Link>
                     <Link to="/products/jewelery">Jewelery</Link>

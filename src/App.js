@@ -10,6 +10,7 @@ import MensClothing from './components/Clothing';
 import Jewelery from './components/Jewelery';
 import Electronics from './components/Electronics';
 import Burger from './components/shared/Burger';
+import Login from './components/auth/Login';
 
 //Contexts
 import ProductContextProvider from './contexts/ProductContextProvider';
@@ -25,6 +26,7 @@ const App = () => {
           <Route path='/products/jewelery' element={<Jewelery/>}/>
           <Route path='/products/electronics' element={<Electronics/>}/>
           <Route path='/products/:id' element={<ProductDetails/>}/>
+          <Route path='/login' element={<Login/>}/>
           <Route path='/cart' element={<ShopCart/>}/>
           <Route path='/*' element={<Navigate to="/products" />}/>
         </Routes>
