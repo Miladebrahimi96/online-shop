@@ -11,6 +11,7 @@ import Jewelery from './components/Jewelery';
 import Electronics from './components/Electronics';
 import Burger from './components/shared/Burger';
 import Login from './components/auth/Login';
+import SignUp from './components/auth/SignUp';
 
 //Contexts
 import ProductContextProvider from './contexts/ProductContextProvider';
@@ -27,6 +28,7 @@ const App = () => {
           <Route path='/products/electronics' element={<Electronics/>}/>
           <Route path='/products/:id' element={<ProductDetails/>}/>
           <Route path='/login' element={<Login/>}/>
+          <Route path='/signup' element={<SignUp/>}/>
           <Route path='/cart' element={<ShopCart/>}/>
           <Route path='/*' element={<Navigate to="/products" />}/>
         </Routes>
