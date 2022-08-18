@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 //Validation function
 import { validation } from './helpers/validation';
@@ -29,13 +29,28 @@ const SignUp = () => {
         }
     }
 
-    const touchHandler = e => {
-        setTouched({...touched, [e.target.name]: true});
+    const touchHandler = e => setTouched({...touched, [e.target.name]: true});
+
+    const navigate = useNavigate();
+
+    const submitHandler = e => {
+        e.preventDefault();
+        if(Object.keys(errors).length){
+            setTouched({
+                email: true,
+                password: true,
+                name: true,
+                confirmPassword: true,
+                isAccepted: true
+            })
+        }else{
+            navigate("/products")
+        }
     }
 
     return (
         <div style={{marginTop: "100px"}}>
-            <form>
+            <form onSubmit={submitHandler}>
                 <h2>Login</h2>
                 <div>
                     <label>Name: </label>
