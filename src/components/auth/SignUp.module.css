@@ -1,0 +1,116 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container h2 {
+    text-align: left;
+    font-size: 2rem;
+    color: #1a73e8;
+    text-transform: uppercase;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.inputContainer label {
+    color: #404040;;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.inputContainer:nth-child(6) label {
+    color: #5d97d1;
+}
+
+
+.inputContainer span {
+    text-align: left;
+    height: 11px;
+    margin-top: 5px;
+    font-size: .7rem;
+    width: -moz-fit-content;
+    line-height: 10px;
+    padding: 2px 3px;
+    width: fit-content;
+    color: red;
+    border-radius: 3px;
+    background-color: rgba(225, 0, 0, 0.175);
+}
+
+.formInput {
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    padding: 0 10px;
+    border: 1px solid #cad2c5;
+    transition: all .2s ease-in;
+}
+
+.notCompleted {
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    padding: 0 10px;
+    border: 1px solid red;
+}
+
+.formInput:focus,
+.notCompleted:focus {
+    outline: none;
+    line-height: 30px;
+    height: 30px;
+    border: 1px solid #5d97d1;
+}
+
+.btnContainer button {
+    background-color: #1a73e8;
+    border: none;
+    font-size: 1.1rem;
+    color: #fff;
+    padding: 8px 18px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.btnContainer button:hover {
+    background: #113c75;
+}
+.btnContainer p{
+    color: #404040;
+    font-size: .9rem;
+}
+
+.btnContainer a {
+    text-decoration: none;
+    color: #1a73e8;
+}
+
+.checkboxField {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row !important;
+    align-items: center;
+    text-align: center;
+    height: 20px !important;
+}
+input[type='checkbox'] {
+    width: 18px;
+    height: 18px;
+    border: 1px solid #5d97d1;
+    border-radius: 5px;
+    appearance: none;
+    cursor: pointer;
+    transition: all .2s ease-in;
+}
+
+input[type='checkbox']:checked {
+    border-radius: 50%;
+    background-color: #5d97d1;
+}

@@ -8,7 +8,11 @@ const Div = styled.div `
     width: 2rem;
     height: 2rem;
     position: fixed;
+<<<<<<< HEAD
     top 16px;
+=======
+    top 20px;
+>>>>>>> develop
     left:30px;
     z-index: 10;
     display: none;
@@ -37,6 +41,7 @@ const Div = styled.div `
         }
     }
 `
+
 
 
 const Burger = () => {
