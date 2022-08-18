@@ -4,6 +4,9 @@ import { Link, useNavigate } from 'react-router-dom';
 //Validation function
 import { validation } from './helpers/validation';
 
+//Styles
+import style from "./SignUp.module.css";
+
 const SignUp = () => {
 
     const [data, setData] = useState({
@@ -49,12 +52,13 @@ const SignUp = () => {
     }
 
     return (
-        <div style={{marginTop: "100px"}}>
-            <form onSubmit={submitHandler}>
+        <div className={style.container}>
+            <form className={style.formContainer} onSubmit={submitHandler}>
                 <h2>Login</h2>
-                <div>
+                <div className={style.inputContainer}>
                     <label>Name: </label>
                     <input 
+                        className={(errors.name && touched.name) ? style.notCompleted : style.formInput}
                         type="text" 
                         name='name' 
                         value={data.name}
@@ -63,9 +67,10 @@ const SignUp = () => {
                     />
                     {errors.name && touched.name && <span>{errors.name}</span>}
                 </div>
-                <div>
+                <div className={style.inputContainer}>
                     <label>Email: </label>
                     <input 
+                        className={(errors.name && touched.name) ? style.notCompleted : style.formInput}
                         type="email" 
                         name='email' 
                         value={data.email}
@@ -74,9 +79,10 @@ const SignUp = () => {
                     />
                     {errors.email && touched.email && <span>{errors.email}</span>}
                 </div>
-                <div>
+                <div className={style.inputContainer}>
                     <label>Password: </label>
                     <input 
+                        className={(errors.name && touched.name) ? style.notCompleted : style.formInput}
                         type="password" 
                         name='password' 
                         value={data.password}
@@ -85,9 +91,10 @@ const SignUp = () => {
                     />
                     {errors.password && touched.password && <span>{errors.password}</span>}
                 </div>
-                <div>
+                <div className={style.inputContainer}>
                     <label>Confirm Password: </label>
                     <input 
+                        className={(errors.name && touched.name) ? style.notCompleted : style.formInput}
                         type="password" 
                         name='confirmPassword' 
                         value={data.confirmPassword}
@@ -96,18 +103,20 @@ const SignUp = () => {
                     />
                     {errors.confirmPassword && touched.confirmPassword && <span>{errors.confirmPassword}</span>}
                 </div>
-                <div>
-                    <label>I accept terms of privacy policy </label>
-                    <input 
-                        type="checkbox" 
-                        name='isAccepted' 
-                        value={data.isAccepted}
-                        onChange={changeHandler}
-                        onFocus={touchHandler}
-                    />
+                <div className={style.inputContainer}>
+                    <div className={style.checkboxField}>
+                        <label>I accept terms of privacy policy </label>
+                        <input 
+                            type="checkbox" 
+                            name='isAccepted' 
+                            value={data.isAccepted}
+                            onChange={changeHandler}
+                            onFocus={touchHandler}
+                        />
+                    </div>
                     {errors.isAccepted && touched.isAccepted && <span>{errors.isAccepted}</span>}
                 </div>
-                <div>
+                <div className={style.btnContainer}>
                     <button type='submit'>Sign Up</button>
                     <div>
                         <p>Already Have an Account? <Link to="/login">Login</Link></p>
